@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts;
 
 public class CheckGround : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class CheckGround : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag(GameConstants.NameTags.Platform))
         {
             isGrounded = true;
         }
@@ -17,7 +16,7 @@ public class CheckGround : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag(GameConstants.NameTags.Platform))
         {
             isGrounded = false;
         }
