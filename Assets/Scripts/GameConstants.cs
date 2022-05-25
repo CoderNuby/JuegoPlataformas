@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts
 {
-    public enum Tags
+    public class GameConstants
     {
-        Platform
     }
 }
